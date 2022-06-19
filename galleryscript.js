@@ -10,8 +10,7 @@ div.style.width = "2rem";
 div.style.backgroundColor = "#BBB"
 div.style.opacity = "0.7";
 div.style.zIndex = "4";
-let galleryCont = document.querySelector(".container");
-galleryCont.appendChild(div);
+document.body.appendChild(div);
 let backBtn = document.querySelector(".gallery");
 backBtn.addEventListener("click", () => {
   location.assign("./index.html");

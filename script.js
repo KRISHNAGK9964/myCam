@@ -32,11 +32,11 @@ navigator.mediaDevices.getUserMedia(constraints)
     })
     
     recorder.addEventListener("stop",()=>{
-        let blob = new Blob(chunks ,{type:"video/mkv"} );
+        let blob = new Blob(chunks ,{type:"video/mp4"} );
      
-        let videoURL = URL.createObjectURL(blob);
-        let a = document.createElement('a');
-        a.href = videoURL
+        // let videoURL = URL.createObjectURL(blob);
+        // let a = document.createElement('a');
+        // a.href = videoURL
         if ( db ){
             let videoID = uid();
             let dbTransaction = db.transaction("video","readwrite");

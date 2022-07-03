@@ -7,7 +7,7 @@ let transparentColor = 'transparent';
 let uid = new ShortUniqueId();
 let gallery = document.querySelector(".gallery");
 gallery.addEventListener("click",()=>{
-    location.assign('./gallery.html')
+    location.assign('./gallery2.html')
 })
 let recorder;
 let chunks = [];
@@ -44,6 +44,7 @@ navigator.mediaDevices.getUserMedia(constraints)
             let videoEntry = {
                 id:`vid-${videoID}`,
                 blobData:blob,
+                liked:false
             }
             let addRequest = videoStore.add(videoEntry);
             addRequest.onsuccess = () =>{
@@ -76,6 +77,7 @@ captureBtnCont.addEventListener("click",()=>{
         let imageEntry = {
             id:`img-${imageID}`,
             url:imgURL,
+            liked:false
         }
         let addRequest = imageStore.add(imageEntry);
         addRequest.onsuccess = () =>{

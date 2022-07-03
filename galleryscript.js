@@ -82,7 +82,7 @@ setTimeout(() => {
         }
         
         let video = videoElem.querySelector("video");
-        video.addEventListener("clcik",modalHandler);
+        video.addEventListener("click",modalHandler);
       });
     };
   }

@@ -141,6 +141,10 @@ section .image-gallery .logo_icons{
     width: 100%;
     border-radius: 3px;
 }
+.imgBox video{
+    width: 100%;
+    border-radius: 3px;
+}
 @media (max-width:1024px) {
     section .image-gallery{
         columns: 2;

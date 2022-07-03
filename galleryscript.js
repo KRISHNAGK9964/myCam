@@ -69,20 +69,20 @@ setTimeout(() => {
         `;
         galleryCont.appendChild(videoElem);
 
-        let deleteBtn = document.querySelector(".delete");
+        let deleteBtn = videoElem.querySelector(".delete");
         deleteBtn.addEventListener("click", deleteListener);
         
-        let downloadBtn = document.querySelector(".download");
+        let downloadBtn = videoElem.querySelector(".download");
         downloadBtn.addEventListener("click", downloadListener);   
         
-        let likeBtn = imageElem.querySelector(".like");
+        let likeBtn = videoElem.querySelector(".like");
         likeBtn.addEventListener("click", likeListener);
         if(liked){
           likeBtn.classList.add("liked");
         }
         
-        let image = imageElem.querySelector("img");
-        image.addEventListener("clcik",modalHandler);
+        let video = videoElem.querySelector("video");
+        video.addEventListener("clcik",modalHandler);
       });
     };
   }
@@ -169,8 +169,19 @@ function modalHandler(e){
   console.log(e.target.parentElement);
   let lightBox = document.querySelector("section .lightBox");
   lightBox.style.display = 'block';
-  let imgtoShow = document.querySelector(".lightBox .showImg .image img")
-  imgtoShow.setAttribute('src' , e.target.getAttribute('src'));
+  let elem = e.target.parentElement;
+  let type = elem.getAttribute('id').split('-')[0];
+  let imgtoShow = document.querySelector(".lightBox .showImg .image img");
+  let vidtoShow = document.querySelector(".lightBox .showImg .image video")
+  if(type == "img"){
+    vidtoShow.style.display = "none";
+    imgtoShow.style.display = 'block';
+    imgtoShow.setAttribute('src' , e.target.getAttribute('src'));
+  }else{
+    imgtoShow.style.display = 'none';
+    vidtoShow.style.display = 'block';
+    vidtoShow.setAttribute('src' , e.target.getAttribute('src'));
+  }
   let liked = e.target.parentElement.querySelector(".liked");
   let likeBtn = lightBox.querySelector(".like");
   if(liked){

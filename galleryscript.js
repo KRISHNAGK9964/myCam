@@ -187,9 +187,12 @@ function modalHandler(e){
   if(liked){
     likeBtn.classList.add("liked");
   }
+
   let closeBtn = lightBox.querySelector(".close")
   console.log(closeBtn);
   closeBtn.addEventListener("click" , ()=>{
     lightBox.style.display = 'none';
   })
+
+  let downloadBtn = lightBox.querySelector('.download');
 }

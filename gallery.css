@@ -12,7 +12,28 @@ section{
     max-width: 100vw;
     padding: 1rem;
 }
+html::-webkit-scrollbar{
+    width: 0.6rem;
+}
+html::-webkit-scrollbar-thumb{
+    background: linear-gradient(rgb(124, 124, 124) , #000) ;
+    border-radius: 0.3rem;
+}
 
+.back-btn {
+    position: fixed;
+    z-index: 5;
+    background: #1f1f1f;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3rem;
+    color: #fff;
+    bottom: 5vh;
+    right: 5vw;
+    cursor: pointer;
+}
 section .lightBox{
     position: fixed;
     top: 0;

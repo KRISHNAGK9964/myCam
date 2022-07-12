@@ -1,5 +1,5 @@
 console.log("running");
-let backBtn = document.querySelector(".gallery");
+let backBtn = document.querySelector(".back-btn");
 backBtn.addEventListener("click", () => {
   location.assign("./index.html");
 });

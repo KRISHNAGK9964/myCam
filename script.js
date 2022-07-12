@@ -7,7 +7,7 @@ let transparentColor = 'transparent';
 let uid = new ShortUniqueId();
 let gallery = document.querySelector(".gallery");
 gallery.addEventListener("click",()=>{
-    location.assign('./gallery2.html')
+    location.assign('./gallery.html')
 })
 let recorder;
 let chunks = [];
